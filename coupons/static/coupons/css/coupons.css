@@ -1,0 +1,179 @@
+body {
+    background: url("../vendor/img/1.jpg") no-repeat center top fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    padding-top: 56px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.btn btn-lg {
+    background-color: black;
+}
+
+#start-purchase-btn {
+    background-color: #ffffff;
+    border-color: #000000;
+    border-radius: 16.3rem;
+
+}
+#start-purchase-link {
+    text-decoration: none;
+    color: black;
+    position: static;
+}
+
+.coupon {
+  border: 3px solid white;
+  border-radius: 105px;
+}
+
+.title-h2 {
+    font-family: 'Ultra', serif;
+    font-size: 40pt;
+    text-align: center;
+    padding-top: 30px;
+    color: white;
+}
+
+.coupons-items {
+    font-family: 'Anton', sans-serif;
+    padding-left: 87px;
+    padding-top: 50px;
+    display: inline-grid;
+    gap: 27px;
+    grid-template-columns: repeat(4, 420px);
+    justify-content: space-around;
+    font-size: 12pt;
+}
+
+.coupon {
+    text-align: center;
+    color: white;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-family: 'Pacifico', fantasy;
+}
+
+.coupons-price {
+   font-size: 20pt;
+}
+
+.coupons-title {
+    font-size: 20pt;
+}
+
+.container {
+    color: white;
+    padding-left: 110px;
+    height: 25px;
+}
+
+img {
+    width: 250px;
+    height: 250px;
+}
+
+nav {
+    text-align: center;
+    padding: 40px 0 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    display: block;
+    padding: center;
+}
+
+.topmenu > li {
+    font-family: 'Ultra', serif;
+    display: inline-block;
+    position: relative;
+}
+
+.topmenu > li > a {
+    color: #fff;
+    padding-top: 1000px;
+    padding: center
+    padding-left: 1000px;
+    position: static;
+    font-size: 3em;
+    line-height: 1;
+    letter-spacing: 3px;
+}
+
+.topmenu > li > a:before {
+    content: "";
+    position: relative;
+    z-index: 5;
+    left: 100%;
+    top: 100%;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    transform: translate(-50%, 20px);
+    opacity: 0;
+    transition: .3s;
+
+}
+
+.topmenu li:hover a:before {
+    transform: translate(-50%, 0);
+    opacity: 1;
+}
+
+.submenu {
+
+    position: absolute;
+    z-index: 4;
+    left: 50%;
+    top: 100%;
+    width: 180px;
+    padding: 30px 0 30px;
+    margin-top: 5px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 30px rgba(0,0,0,.2);
+    box-sizing: border-box;
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(-50%, 20px);
+    transition: .3s;
+}
+
+.topmenu > li:hover .submenu {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, 0);
+
+}
+
+.submenu a {
+    color: black;
+    font-size: 20px;
+    letter-spacing: 1px;
+    padding: 5px 10px;
+    transition: .2s linear;
+}
+
+.submenu a:hover {
+    background: rgba(255,207,0,0.64);
+}
+
+
+

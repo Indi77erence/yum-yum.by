@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>{{title}}</title>
+    <!-- Шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Pacifico&display=swap" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="../../static/coupons/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../../static/coupons/css/coupons.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+
+</head>
+
+<body>
+<!-- Navigation -->
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="/">Yum-Yum</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/" ><i class="fa fa-home" aria-hidden="true"></i> На главную </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/coupons"> <i class="fa fa-hand-o-right" aria-hidden="true"></i> Акции</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<ul class="topmenu">
+    <li><a href="/coupons" class="down">- Что-то конкретное -</a>
+      <ul class="submenu">
+            <li><a href="/coupons/BK">Burger King</a></li>
+            <li><a href="/coupons/pizzahome">Pizzahome</a></li>
+            <li><a href="/coupons/dominos">Dominos</a></li>
+            <li><a href="/coupons/woksushi">Woksushi</a></li>
+          <li><a href="/coupons/parkking">ParKKing</a></li>
+
+      </ul>
+    </li>
+</ul>
+    <div class="coupons-items">
+        {% for item in all_coupons %}
+            <div class="coupon">
+                <img src="{{item.photo}}" alt="">
+                <p class="coupons-price">{{item.price}} </p>
+                
+                <p class="coupons-content">{{item.content}} </p>
+                <p class="coupons-title"> {{item.title}} </p>
+                {% for key, value in urls_market_dict.items %}
+                    {% if key == item.market_name %}
+                        <button id="start-purchase-btn" type="button" class="btn btn-lg">
+                            <a id="start-purchase-link" href="{{value}}">
+                                ЗАКАЗАТЬ
+                            </a>
+                        </button>
+                    {% endif %}
+                {% endfor %}
+                </div>
+        {% endfor %}
+    </div>
+
+
+
+<script src="../../static/coupons/vendor/jquery/jquery.min.js"></script>
+<script src="../../static/coupons/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- FontAwesome script -->
+<script src="../../static/coupons/vendor/fontawesome/fontawesome-icons.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

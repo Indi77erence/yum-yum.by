@@ -1,0 +1,59 @@
+body {
+    background: url("../vendor/img/1.jpg") no-repeat center top fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    padding-top: 56px;
+    text-align: center;
+}
+
+.container {
+    color: white;
+    padding-left: 100px;
+    height: 25px;
+}
+
+.btn btn-lg{
+    background-color: black;
+    margin-bottom: 3.5rem;
+    padding-top: 100px;
+}
+
+.row {
+    margin-right: -674px;
+    padding-left: 100px;
+    font-style: revert;
+}
+
+.col-lg-6 {
+    color: #ffffff;
+}
+
+.info {
+    padding-top: 30px;
+}
+
+.mt-5 {
+    font-size: 11rem;
+    font-family: 'Pacifico', fantasy;
+    margin: 10px 0 50px 0;
+}
+
+.navbar-brand {
+    font-family: 'Pacifico', fantasy;
+}
+
+#start-purchase-btn {
+    background-color: #ffffff;
+    border-color: #000000;
+    border-radius: 16.3rem;
+    padding-top: 5px;
+}
+
+#start-purchase-link {
+    text-decoration: none;
+    color: black;
+    position: static;
+}
+
