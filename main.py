@@ -17,25 +17,26 @@ async def get_page_data(session, market):
     async with session.get(url=market) as response:
         response_text = await response.text()
         soup = BeautifulSoup(response_text, 'lxml')
-        # if market == 'https://burger-king.by/coupons/':
-        #     market_name = ('BK',)
-        #
-        #     name_coupons = soup.find('div', class_="sc-1cnk4by-0 dpIDOx")
-        #     list_name_coupons = [i.text.strip() for i in name_coupons]
-        #
-        #     desc_product = soup.find_all('div', class_='coupons-page__product-desc')
-        #     desc_coupons_gen = (i.text.strip() for i in desc_product)
-        #
-        #     price_product = soup.find_all('div', class_='coupons-page__product-price')
-        #     price_coupons_gen = (i.text.strip() for i in price_product)
-        #
-        #     image_product = soup.select('div.coupons-page__product-img img')
-        #     image_src_coupons_gen = ('https://burger-king.by' + (el.attrs["src"]) for el in image_product)
-        #
-        #     burger_king_data = zip(list_name_coupons, desc_coupons_gen, price_coupons_gen,
-        #                            image_src_coupons_gen, market_name * len(list_name_coupons))
-        #
-        #     data_market.add(burger_king_data)
+        if market == 'https://burger-king.by/coupons/':
+            market_name = ('BK',)
+
+            name_coupons = soup.find('div', class_="sc-1cnk4by-0 dpIDOx")
+            list_name_coupons = [i.text.strip() for i in name_coupons]
+
+            desc_product = soup.find_all('div', class_='coupons-page__product-desc')
+            desc_coupons_gen = (i.text.strip() for i in desc_product)
+
+            price_product = soup.find_all('div', class_='coupons-page__product-price')
+            price_coupons_gen = (i.text.strip() for i in price_product)
+
+            image_product = soup.select('div.coupons-page__product-img img')
+            image_src_coupons_gen = ('https://burger-king.by' + (el.attrs["src"]) for el in image_product)
+
+            burger_king_data = zip(list_name_coupons, desc_coupons_gen, price_coupons_gen,
+                                   image_src_coupons_gen, market_name * len(list_name_coupons))
+
+            data_market.add(burger_king_data)
+
         if market == 'https://woksushi.by/':
             market_name = ('woksushi',)
             name_combo = soup.find(attrs={"data-id": "30"}).find_all('a', class_='ddish__name')
