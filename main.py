@@ -18,7 +18,6 @@ async def get_page_data(session, market):
     async with session.get(url=market) as response:
         response_text = await response.text()
         soup = BeautifulSoup(response_text, 'html.parser')
-
         if market == 'https://burger-king.by/coupons/':
             market_name = ('BK',)
 
