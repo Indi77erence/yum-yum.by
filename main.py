@@ -38,6 +38,10 @@ async def get_page_data(session, market):
         #     data_market.add(burger_king_data)
 
 
+
+
+
+
         if market == 'https://woksushi.by/':
             market_name = ('woksushi',)
             name_combo = soup.find(attrs={"data-id": "30"}).find_all('a', class_='ddish__name')
