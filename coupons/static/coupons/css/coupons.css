@@ -1,3 +1,4 @@
+
 body {
     background: url("../vendor/img/1.jpg") no-repeat center top fixed;
     -webkit-background-size: cover;
@@ -40,11 +41,13 @@ body {
 
 .coupons-items {
     font-family: 'Anton', sans-serif;
-    padding-left: 87px;
-    padding-top: 50px;
+    padding-left: 50px;
+    padding-top: 0px;
+    padding-right: 50px;
     display: inline-grid;
     gap: 27px;
-    grid-template-columns: repeat(4, 420px);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(50px);
     justify-content: space-around;
     font-size: 12pt;
 }
@@ -111,7 +114,7 @@ nav a {
     padding: center
     padding-left: 1000px;
     position: static;
-    font-size: 3em;
+    font-size: 2em;
     line-height: 1;
     letter-spacing: 3px;
 }
@@ -138,7 +141,6 @@ nav a {
 }
 
 .submenu {
-
     position: absolute;
     z-index: 4;
     left: 50%;
@@ -175,5 +177,42 @@ nav a {
     background: rgba(255,207,0,0.64);
 }
 
+@media screen and (max-width: 980px) {
+    .coupons-items {
+    font-family: 'Anton', sans-serif;
+    padding-left: 50px;
+    padding-top: 0px;
+    padding-right: 50px;
+    display: inline-grid;
+    gap: 27px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(300px);
+    justify-content: space-around;
+    font-size: 12pt;
+}
+}
+@media screen and (max-width: 650px) {
+    .coupons-items {
+    font-family: 'Anton', sans-serif;
+    padding-left: 50px;
+    padding-top: 0px;
+    padding-right: 50px;
+    display: inline-grid;
+    gap: 27px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(300px);
+    justify-content: space-around;
+    font-size: 12pt;
+    }
 
-
+    .topmenu > li > a {
+    color: #fff;
+    padding-top: 1000px;
+    padding: center
+    padding-left: 1000px;
+    position: static;
+    font-size: 1.5em;
+    line-height: 1;
+    letter-spacing: 3px;
+    }
+}
