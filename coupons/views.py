@@ -5,7 +5,7 @@ from django.shortcuts import render
 from main import parser, urls_market_dict
 from coupons.models import Coupons
 
-menu = ['Главная', 'Купоны и Акции']
+menu = ['Главная', 'Yum-yum']
 
 
 def start_cite():
