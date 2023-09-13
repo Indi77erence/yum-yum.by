@@ -10,7 +10,7 @@ body {
 
 .container {
     color: white;
-    padding-left: 100px;
+    padding-left: 12px;
     height: 25px;
 }
 
@@ -21,9 +21,9 @@ body {
 }
 
 .row {
-    margin-right: -674px;
     padding-left: 100px;
     font-style: revert;
+    padding-left: 170px;
 }
 
 .col-lg-6 {
@@ -44,14 +44,19 @@ body {
     font-family: 'Pacifico', fantasy;
 }
 
+.nav-link{
+    font-family: 'Pacifico', fantasy;
+}
+
 #start-purchase-btn {
     background-color: #ffffff;
     border-color: #000000;
     border-radius: 16.3rem;
-    padding-top: 5px;
+    padding-top: 2px;
 }
 
 #start-purchase-link {
+    font-family: Georgia, serif;
     text-decoration: none;
     color: black;
     position: static;

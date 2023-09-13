@@ -1,4 +1,3 @@
-
 body {
     background: url("../vendor/img/1.jpg") no-repeat center top fixed;
     -webkit-background-size: cover;
@@ -9,15 +8,30 @@ body {
     box-sizing: border-box;
     text-align: center;
 }
+
 .warning{
-     text-align: center;
-     border-color: #414124;
-     color: white;
-     font-size: 20pt;
-     padding-left: 30px;
+    font-family: 'Pacifico', fantasy;
+    text-align: center;
+    border-color: #414124;
+    color: white;
+    font-size: 20pt;
+    padding-left: 30px;
 }
+
 .btn btn-lg {
     background-color: black;
+}
+
+.coupons-content{
+    font-family: cursive;
+}
+
+.coupons-title{
+    font-family: cursive;
+}
+
+.coupons-price{
+    font-family: cursive;
 }
 
 #start-purchase-btn {
@@ -26,6 +40,7 @@ body {
     border-radius: 16.3rem;
 
 }
+
 #start-purchase-link {
     text-decoration: none;
     color: black;
@@ -43,6 +58,11 @@ body {
     text-align: center;
     padding-top: 30px;
     color: white;
+}
+
+img{
+    padding-top: 10px;
+    border-radius: 25px;
 }
 
 .coupons-items {
@@ -115,6 +135,7 @@ nav a {
 }
 
 .topmenu > li > a {
+    font-family: 'Pacifico', fantasy;
     color: #fff;
     padding-top: 1000px;
     padding: center
@@ -123,6 +144,10 @@ nav a {
     font-size: 2em;
     line-height: 1;
     letter-spacing: 3px;
+}
+
+.nav-link{
+    font-family: 'Pacifico', fantasy;
 }
 
 .topmenu > li > a:before {
@@ -138,7 +163,6 @@ nav a {
     transform: translate(-50%, 20px);
     opacity: 0;
     transition: .3s;
-
 }
 
 .topmenu li:hover a:before {
@@ -195,7 +219,7 @@ nav a {
     grid-template-rows: repeat(300px);
     justify-content: space-around;
     font-size: 12pt;
-}
+    }
 }
 @media screen and (max-width: 650px) {
     .coupons-items {
