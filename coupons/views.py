@@ -4,15 +4,14 @@ import django.db.utils
 from django.shortcuts import render
 from main import parser, urls_market_dict
 from coupons.models import Coupons
-import asyncio
-import time
-import threading
 
 menu = ['Главная', 'Купоны и Акции']
 
 
 def start_cite():
     get_data_title_db()
+
+
 def get_data_title_db():
     try:
         all_coupons = Coupons.objects.in_bulk()
@@ -26,8 +25,6 @@ def get_data_title_db():
         logging.basicConfig(level=logging.ERROR, filename="erors_log.log", filemode="a",
                             format="%(asctime)s %(levelname)s %(message)s")
         logging.error('django.db.utils.IntegrityError', exc_info=False)
-    # except sqlite3.Error as error:
-    #     print("Ошибка при работе с SQLite", error)
 
 
 def add_coupons(data_for_add):
@@ -62,44 +59,6 @@ def del_coupons(list_data_for_del):
     sqlite_connection.close()
 
 
-#
-# async def start_coupons_page(data_market):
-#     try:
-#         name_market = []
-#         for market in data_market:
-#             for market_coupons in market:
-#                 if len(market_coupons) == 5:
-#                     if market_coupons[4] not in name_market:
-#                         name_market.append(market_coupons[4])
-#                     market_id = name_market.index(market_coupons[4])
-#
-#                     await Coupons.objects.acreate(
-#                         title=market_coupons[0],
-#                         content=market_coupons[1],
-#                         price=market_coupons[2],
-#                         photo=market_coupons[3],
-#                         market_name=market_coupons[4],
-#                         market_id=market_id,
-#                     )
-#
-#                 elif len(market_coupons) == 4:
-#                     if market_coupons[3] not in name_market:
-#                         name_market.append(market_coupons[3])
-#                     market_id = name_market.index(market_coupons[3])
-#
-#                     await Coupons.objects.acreate(
-#                         title=market_coupons[0],
-#                         content=market_coupons[1],
-#                         photo=market_coupons[2],
-#                         market_name=market_coupons[3],
-#                         market_id=market_id)
-#
-#     except django.db.utils.IntegrityError:
-#         logging.basicConfig(level=logging.ERROR, filename="erors_log.log", filemode="a",
-#                             format="%(asctime)s %(levelname)s %(message)s")
-#         logging.error('django.db.utils.IntegrityError', exc_info=False)
-
-
 def index(request):
     return render(request, 'coupons/index.html', {'menu': menu, 'title': menu[0]})
 
@@ -121,7 +80,3 @@ def coupons_filter_market(request, market_name):
 
 
 start_cite()
-
-# time.sleep(delay)
-# thread = threading.Thread(target=get_data_title_db)
-# thread.start()
