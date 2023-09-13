@@ -17,7 +17,7 @@ urls_market_dict = {
 async def get_page_data(session, market):
     async with session.get(url=market) as response:
         response_text = await response.text()
-        soup = BeautifulSoup(response_text, 'html.parser')
+        soup = BeautifulSoup(response_text, 'lxml')
         if market == 'https://burger-king.by/coupons/':
             market_name = ('BK',)
 
@@ -38,7 +38,7 @@ async def get_page_data(session, market):
 
             data_market.add(burger_king_data)
 
-        if market == 'https://woksushi.by/':
+        elif market == 'https://woksushi.by/':
             market_name = ('woksushi',)
             name_combo = soup.find(attrs={"data-id": "30"}).find_all('a', class_='ddish__name')
             name_combo_list = [name.text for name in name_combo]
