@@ -102,8 +102,12 @@ img{
 
 .container {
     color: white;
-    padding-left: 110px;
+    padding-left: 23.5px;
     height: 25px;
+}
+
+.collapse navbar-collapse{
+    padding-left: 50px;
 }
 
 img {
