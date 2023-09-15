@@ -1,13 +1,7 @@
 # yum-yum.by
-                                                Website with coupons and promotions of fast food marketplaces.
+Сайт с купонами и акциями маркетплейсов быстрого питания города Гродно.
 <p align="center">
-      <img src="https://ibb.co/sWrgxtM" width="726">
-</p>
-
-<p align="center">
-   <img src="" alt="Unity Version">
-   <img src="" alt="Game Version">
-   <img src="" alt="License">
+      <img src="https://i.ibb.co/p3x5zG2/Screenshot-1.png" alt="Screenshot-1" border="0" width="726">
 </p>
 
 ## About
