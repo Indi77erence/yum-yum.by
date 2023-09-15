@@ -17,13 +17,13 @@
 
 2. Открыть через IDE папку /yum-yum.by
 
-3. Установить зависимости в терминале:             "python -m pip install -r requirements.txt"
+3. Установить зависимости через терминал:             "python -m pip install -r requirements.txt"
 
-4. Перейти в директорию yumyum в терминале:        "cd .\yumyum\"
+4. Перейти в директорию yumyum через терминал:        "cd .\yumyum\"
 
-5. Запустить проект:                               "python manage.py runserver  "
+5. Запустить проект через терминал:                   "python manage.py runserver  "
 
-6. Открыть в браузере страницу c алресом           "127.0.0.1:8000"
+6. Открыть в браузере страницу c алресом:             "127.0.0.1:8000"
 
 
 ## Developers
