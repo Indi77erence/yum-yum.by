@@ -28,6 +28,5 @@
 
 ## Developers
 
-- [Kirill]([https://github.com/Indi77erence])
+- [Kirill] [https://github.com/Indi77erence]
 
-## License
