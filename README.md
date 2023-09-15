@@ -9,7 +9,7 @@
 Данный проект позволяет централизованно выбрать для заказа купоны и акции от популярных маркетплейсов быстрого питания города Гродно в одном месте. 
 
 <p align="center">
-      <img src="https://i.ibb.co/p3x5zG2/Screenshot-2.png" alt="Screenshot-2" border="0" width="726">
+      <img src="https://i.ibb.co/q5Kb3zQ/Screenshot-2.png" alt="Screenshot-2" border="0" width="726">
 </p>
 
 ## Documentation
