@@ -25,6 +25,10 @@ def get_data_title_db():
         logging.basicConfig(level=logging.ERROR, filename="erors_log.log", filemode="a",
                             format="%(asctime)s %(levelname)s %(message)s")
         logging.error('django.db.utils.IntegrityError', exc_info=False)
+    except TypeError:
+        logging.basicConfig(level=logging.ERROR, filename="erors_log.log", filemode="a",
+                            format="%(asctime)s %(levelname)s %(message)s")
+        logging.error('TypeError', exc_info=False)
 
 
 def add_coupons(data_for_add):
@@ -80,3 +84,4 @@ def coupons_filter_market(request, market_name):
 
 
 start_cite()
+

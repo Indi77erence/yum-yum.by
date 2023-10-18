@@ -1,0 +1,194 @@
+2023-10-10 20:52:43,095 ERROR aiohttp.ClientConnectorError
+2023-10-10 20:52:44,282 ERROR aiohttp.ClientConnectorError
+2023-10-10 20:52:44,458 ERROR aiohttp.ClientConnectorError
+2023-10-10 20:53:05,300 ERROR aiohttp.ClientConnectorError
+2023-10-10 20:53:05,501 ERROR aiohttp.ClientConnectorError
+2023-10-10 20:53:24,551 INFO D:\Python\yum-yum.by_v3\main.py changed, reloading.
+2023-10-10 20:53:25,423 INFO D:\Python\yum-yum.by_v3\main.py changed, reloading.
+2023-10-10 20:53:46,446 ERROR aiohttp.ClientConnectorError
+2023-10-10 20:53:47,268 ERROR aiohttp.ClientConnectorError
+2023-10-10 20:54:07,469 ERROR aiohttp.ClientConnectorError
+2023-10-10 20:54:08,287 ERROR aiohttp.ClientConnectorError
+2023-10-10 20:57:13,883 INFO D:\Python\yum-yum.by_v3\coupons\views.py changed, reloading.
+2023-10-10 20:57:35,722 ERROR aiohttp.ClientConnectorError
+2023-10-10 20:57:35,722 ERROR django.db.utils.IntegrityError
+2023-10-10 20:57:37,456 ERROR aiohttp.ClientConnectorError
+2023-10-10 20:57:37,457 ERROR django.db.utils.IntegrityError
+2023-10-10 20:57:50,678 WARNING Not Found: /favicon.ico
+2023-10-10 20:57:51,852 WARNING Not Found: /favicon.ico
+2023-10-10 20:59:29,601 INFO D:\Python\yum-yum.by_v3\coupons\views.py changed, reloading.
+2023-10-10 20:59:51,330 ERROR aiohttp.ClientConnectorError
+2023-10-10 20:59:51,330 ERROR TypeError
+2023-10-10 21:02:06,836 INFO D:\Python\yum-yum.by_v3\coupons\views.py changed, reloading.
+2023-10-10 21:02:28,590 ERROR aiohttp.ClientConnectorError
+2023-10-10 21:02:28,590 ERROR TypeError
+2023-10-10 21:03:01,436 INFO D:\Python\yum-yum.by_v3\coupons\views.py changed, reloading.
+2023-10-10 21:03:23,141 ERROR aiohttp.ClientConnectorError
+2023-10-10 21:03:23,141 ERROR TypeError
+2023-10-10 21:03:24,039 ERROR aiohttp.ClientConnectorError
+2023-10-10 21:03:24,039 ERROR TypeError
+2023-10-10 21:03:54,154 ERROR aiohttp.ClientConnectorError
+2023-10-10 21:03:54,155 ERROR TypeError
+2023-10-10 21:04:25,168 ERROR aiohttp.ClientConnectorError
+2023-10-10 21:04:25,168 ERROR TypeError
+2023-10-10 21:04:56,179 ERROR aiohttp.ClientConnectorError
+2023-10-10 21:04:56,179 ERROR TypeError
+2023-10-10 21:05:27,194 ERROR aiohttp.ClientConnectorError
+2023-10-10 21:05:27,194 ERROR TypeError
+2023-10-10 21:05:58,213 ERROR aiohttp.ClientConnectorError
+2023-10-10 21:05:58,213 ERROR TypeError
+2023-10-10 21:06:29,227 ERROR aiohttp.ClientConnectorError
+2023-10-10 21:06:29,227 ERROR TypeError
+2023-10-10 21:07:00,236 ERROR aiohttp.ClientConnectorError
+2023-10-10 21:07:00,237 ERROR TypeError
+2023-10-10 21:07:31,246 ERROR aiohttp.ClientConnectorError
+2023-10-10 21:07:31,246 ERROR TypeError
+2023-10-10 21:08:02,262 ERROR aiohttp.ClientConnectorError
+2023-10-10 21:08:02,262 ERROR TypeError
+2023-10-10 21:08:33,275 ERROR aiohttp.ClientConnectorError
+2023-10-10 21:08:33,275 ERROR TypeError
+2023-10-10 21:09:04,286 ERROR aiohttp.ClientConnectorError
+2023-10-10 21:09:04,287 ERROR TypeError
+2023-10-10 21:09:35,298 ERROR aiohttp.ClientConnectorError
+2023-10-10 21:09:35,298 ERROR TypeError
+2023-10-10 21:09:52,328 ERROR aiohttp.ClientConnectorError
+2023-10-10 21:09:52,328 ERROR TypeError
+2023-10-10 21:10:06,311 ERROR aiohttp.ClientConnectorError
+2023-10-10 21:10:06,311 ERROR TypeError
+2023-10-10 21:10:23,339 ERROR aiohttp.ClientConnectorError
+2023-10-10 21:10:23,339 ERROR TypeError
+2023-10-10 21:10:37,322 ERROR aiohttp.ClientConnectorError
+2023-10-10 21:10:37,322 ERROR TypeError
+2023-10-10 21:11:08,333 ERROR aiohttp.ClientConnectorError
+2023-10-10 21:11:08,333 ERROR TypeError
+2023-10-10 21:11:39,346 ERROR aiohttp.ClientConnectorError
+2023-10-10 21:11:39,346 ERROR TypeError
+2023-10-10 21:12:10,358 ERROR aiohttp.ClientConnectorError
+2023-10-10 21:12:10,358 ERROR TypeError
+2023-10-10 21:12:41,370 ERROR aiohttp.ClientConnectorError
+2023-10-10 21:12:41,371 ERROR TypeError
+2023-10-10 21:13:12,392 ERROR aiohttp.ClientConnectorError
+2023-10-10 21:13:12,393 ERROR TypeError
+2023-10-10 21:13:43,401 ERROR aiohttp.ClientConnectorError
+2023-10-10 21:13:43,401 ERROR TypeError
+2023-10-10 21:14:14,412 ERROR aiohttp.ClientConnectorError
+2023-10-10 21:14:14,412 ERROR TypeError
+2023-10-10 21:14:45,423 ERROR aiohttp.ClientConnectorError
+2023-10-10 21:14:45,423 ERROR TypeError
+2023-10-10 21:15:16,434 ERROR aiohttp.ClientConnectorError
+2023-10-10 21:15:16,434 ERROR TypeError
+2023-10-10 21:15:47,447 ERROR aiohttp.ClientConnectorError
+2023-10-10 21:15:47,447 ERROR TypeError
+2023-10-10 21:16:18,457 ERROR aiohttp.ClientConnectorError
+2023-10-10 21:16:18,457 ERROR TypeError
+2023-10-10 21:16:49,467 ERROR aiohttp.ClientConnectorError
+2023-10-10 21:16:49,467 ERROR TypeError
+2023-10-10 21:17:20,476 ERROR aiohttp.ClientConnectorError
+2023-10-10 21:17:20,476 ERROR TypeError
+2023-10-10 21:17:51,486 ERROR aiohttp.ClientConnectorError
+2023-10-10 21:17:51,486 ERROR TypeError
+2023-10-10 21:18:22,502 ERROR aiohttp.ClientConnectorError
+2023-10-10 21:18:22,502 ERROR TypeError
+2023-10-10 21:18:53,517 ERROR aiohttp.ClientConnectorError
+2023-10-10 21:18:53,517 ERROR TypeError
+2023-10-10 21:19:24,529 ERROR aiohttp.ClientConnectorError
+2023-10-10 21:19:24,530 ERROR TypeError
+2023-10-10 21:19:55,542 ERROR aiohttp.ClientConnectorError
+2023-10-10 21:19:55,542 ERROR TypeError
+2023-10-10 21:20:26,554 ERROR aiohttp.ClientConnectorError
+2023-10-10 21:20:26,554 ERROR TypeError
+2023-10-10 21:20:57,566 ERROR aiohttp.ClientConnectorError
+2023-10-10 21:20:57,566 ERROR TypeError
+2023-10-10 23:20:35,144 ERROR aiohttp.ClientConnectorError
+2023-10-10 23:20:35,144 ERROR TypeError
+2023-10-10 23:20:40,619 INFO D:\Python\yum-yum.by_v3\coupons\views.py changed, reloading.
+2023-10-10 23:21:02,438 ERROR aiohttp.ClientConnectorError
+2023-10-10 23:21:02,438 ERROR TypeError
+2023-10-12 22:35:04,900 ERROR aiohttp.ClientConnectorError
+2023-10-12 22:35:04,900 ERROR TypeError
+2023-10-12 22:35:07,540 WARNING Not Found: /favicon.ico
+2023-10-13 17:11:40,303 ERROR aiohttp.ClientConnectorError
+2023-10-13 17:11:40,304 ERROR TypeError
+2023-10-13 17:11:42,440 ERROR Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "D:\Python\yum-yum.by_v3\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\yum-yum.by_v3\venv\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\yum-yum.by_v3\venv\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "D:\Python\yum-yum.by_v3\venv\Lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+2023-10-13 17:11:42,652 WARNING Bad Request: /
+2023-10-13 17:12:42,236 INFO D:\Python\yum-yum.by_v3\yumyum\settings.py changed, reloading.
+2023-10-13 17:12:50,132 ERROR aiohttp.ClientConnectorError
+2023-10-13 17:12:50,132 ERROR TypeError
+2023-10-13 17:12:53,052 ERROR Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "D:\Python\yum-yum.by_v3\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\yum-yum.by_v3\venv\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\yum-yum.by_v3\venv\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "D:\Python\yum-yum.by_v3\venv\Lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+2023-10-13 17:12:53,187 WARNING Bad Request: /
+2023-10-13 17:13:03,824 INFO D:\Python\yum-yum.by_v3\yumyum\settings.py changed, reloading.
+2023-10-13 17:13:12,644 ERROR aiohttp.ClientConnectorError
+2023-10-13 17:13:12,644 ERROR TypeError
+2023-10-18 18:18:45,799 ERROR aiohttp.ClientConnectorError
+2023-10-18 18:18:45,801 ERROR TypeError
+2023-10-18 18:32:38,595 ERROR aiohttp.ClientConnectorError
+2023-10-18 18:32:38,595 ERROR TypeError
+2023-10-18 18:32:40,789 WARNING Not Found: /static/coupons/vendor/bootstrap/css/bootstrap.min.css
+2023-10-18 18:32:40,795 WARNING Not Found: /static/coupons/css/index.css
+2023-10-18 18:32:40,802 WARNING Not Found: /static/coupons/vendor/jquery/jquery.min.js
+2023-10-18 18:32:40,804 WARNING Not Found: /static/coupons/vendor/bootstrap/js/bootstrap.bundle.min.js
+2023-10-18 18:32:40,811 WARNING Not Found: /static/coupons/vendor/fontawesome/fontawesome-icons.js
+2023-10-18 18:32:40,822 WARNING Not Found: /static/coupons/vendor/fontawesome/fontawesome-icons.js
+2023-10-18 18:32:40,895 WARNING Not Found: /favicon.ico
+2023-10-18 18:32:42,930 WARNING Not Found: /static/coupons/vendor/bootstrap/css/bootstrap.min.css
+2023-10-18 18:32:42,932 WARNING Not Found: /static/coupons/css/index.css
+2023-10-18 18:32:42,934 WARNING Not Found: /static/coupons/vendor/jquery/jquery.min.js
+2023-10-18 18:32:42,944 WARNING Not Found: /static/coupons/vendor/bootstrap/js/bootstrap.bundle.min.js
+2023-10-18 18:32:42,952 WARNING Not Found: /static/coupons/vendor/fontawesome/fontawesome-icons.js
+2023-10-18 18:32:42,982 WARNING Not Found: /favicon.ico
+2023-10-18 18:32:45,697 WARNING Not Found: /static/coupons/vendor/bootstrap/css/bootstrap.min.css
+2023-10-18 18:32:45,705 WARNING Not Found: /static/coupons/vendor/jquery/jquery.min.js
+2023-10-18 18:32:45,706 WARNING Not Found: /static/coupons/vendor/bootstrap/js/bootstrap.bundle.min.js
+2023-10-18 18:32:45,708 WARNING Not Found: /static/coupons/vendor/fontawesome/fontawesome-icons.js
+2023-10-18 18:32:45,710 WARNING Not Found: /static/coupons/css/coupons.css
+2023-10-18 18:32:49,378 WARNING Not Found: /static/coupons/vendor/bootstrap/css/bootstrap.min.css
+2023-10-18 18:32:49,383 WARNING Not Found: /static/coupons/vendor/jquery/jquery.min.js
+2023-10-18 18:32:49,385 WARNING Not Found: /static/coupons/css/index.css
+2023-10-18 18:32:49,386 WARNING Not Found: /static/coupons/vendor/bootstrap/js/bootstrap.bundle.min.js
+2023-10-18 18:32:49,388 WARNING Not Found: /static/coupons/vendor/fontawesome/fontawesome-icons.js
+2023-10-18 18:32:49,402 WARNING Not Found: /static/coupons/vendor/bootstrap/js/bootstrap.bundle.min.js
+2023-10-18 18:32:49,407 WARNING Not Found: /static/coupons/vendor/fontawesome/fontawesome-icons.js
+2023-10-18 18:33:16,833 WARNING Not Found: /static/coupons/vendor/bootstrap/css/bootstrap.min.css
+2023-10-18 18:33:16,835 WARNING Not Found: /static/coupons/css/index.css
+2023-10-18 18:33:16,837 WARNING Not Found: /static/coupons/vendor/jquery/jquery.min.js
+2023-10-18 18:33:16,840 WARNING Not Found: /static/coupons/vendor/fontawesome/fontawesome-icons.js
+2023-10-18 18:33:16,843 WARNING Not Found: /static/coupons/vendor/bootstrap/js/bootstrap.bundle.min.js
+2023-10-18 18:33:16,880 WARNING Not Found: /static/coupons/vendor/bootstrap/js/bootstrap.bundle.min.js
+2023-10-18 18:33:16,884 WARNING Not Found: /static/coupons/vendor/fontawesome/fontawesome-icons.js
+2023-10-18 18:33:18,135 WARNING Not Found: /static/coupons/vendor/bootstrap/css/bootstrap.min.css
+2023-10-18 18:33:18,138 WARNING Not Found: /static/coupons/css/coupons.css
+2023-10-18 18:33:18,144 WARNING Not Found: /static/coupons/vendor/jquery/jquery.min.js
+2023-10-18 18:33:18,145 WARNING Not Found: /static/coupons/vendor/bootstrap/js/bootstrap.bundle.min.js
+2023-10-18 18:33:18,146 WARNING Not Found: /static/coupons/vendor/fontawesome/fontawesome-icons.js
+2023-10-18 18:33:18,276 WARNING Not Found: /static/coupons/vendor/bootstrap/js/bootstrap.bundle.min.js
+2023-10-18 18:33:18,364 WARNING Not Found: /static/coupons/vendor/fontawesome/fontawesome-icons.js
+2023-10-18 18:33:26,399 INFO D:\Python\yum-yum.by_v3\yumyum\settings.py changed, reloading.
+2023-10-18 18:33:27,475 ERROR aiohttp.ClientConnectorError
+2023-10-18 18:33:27,475 ERROR TypeError
+2023-10-18 22:48:04,945 WARNING Not Found: /favicon.ico
