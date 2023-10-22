@@ -158,6 +158,4 @@ def parser():
 
 
 if __name__ == '__main__':
-    parser()
-    for i in data_market:
-        print(i)
+
