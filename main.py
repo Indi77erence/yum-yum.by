@@ -17,7 +17,6 @@ urls_market_dict = {
     # 'parkking': 'https://parkking.by/product-category/akcii/',
 }
 
-
 async def get_page_data(session, market):
     async with session.get(url=market) as response:
         response_text = await response.text()
