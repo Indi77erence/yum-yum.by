@@ -84,4 +84,3 @@ def coupons_filter_market(request, market_name):
 
 
 start_cite()
-

@@ -12,7 +12,7 @@ urls_market_dict = {
     'woksushi': 'https://woksushi.by/',
     'pizzahome': 'https://pizzahome.by/menu/akczii/',
     'dominos': 'https://dominos.by/discount_campaign/',
-    'parkking': 'https://parkking.by/product-category/akcii/',
+    # 'parkking': 'https://parkking.by/product-category/akcii/',
 }
 
 
