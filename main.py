@@ -15,6 +15,7 @@ urls_market_dict = {
     'dominos': 'https://dominos.by/discount_campaign/',
     'hot-dog-family': 'https://carte.by/grodno/hot-dog/',
     'faradey': 'https://carte.by/grodno/faraday-delivery/',
+    'shaw-books': 'https://carte.by/grodno/shawbooks-sov-delivery/',
 }
 
 
@@ -34,7 +35,8 @@ async def get_page_data(session, market):
             images = soup.find_all(src=re.compile("assets"))
             images_action_list = [image['src'] for image in images[1:-7]]
 
-            burger_king_data = zip(name_coupons_list, price_coupons_gen,
+            content_combo_list = ['' for i in range(len(name_coupons_list))]
+            burger_king_data = zip(name_coupons_list, content_combo_list, price_coupons_gen,
                                    images_action_list, market_name * len(name_coupons_list))
 
             data_market.add(burger_king_data)
@@ -131,6 +133,23 @@ async def get_page_data(session, market):
             faradey = zip(name_product_list, content_product_list, price_product_list,
                           images_action_list, market_name * len(name_product_list))
             data_market.add(faradey)
+
+        elif market == 'https://carte.by/grodno/shawbooks-sov-delivery/':
+            market_name = ('shaw-books',)
+            name_products = soup.find_all('div', class_='ddish__name')
+            name_product_list = [name.text.strip() for name in name_products[1:13]]
+
+            content_products = soup.find_all('div', class_='ddish__ingredients')
+            content_product_list = [content.text.strip() for content in content_products[1:13]]
+
+            price_products = soup.find_all('div', class_='ddish__sum')
+            price_product_list = [price.text.strip() for price in price_products[1:13]]
+
+            images = soup.find_all(src=re.compile("assets"))
+            images_action_list = [image['src'] for image in images[2:13]]
+            shaw_books = zip(name_product_list, content_product_list, price_product_list,
+                             images_action_list, market_name * len(name_product_list))
+            data_market.add(shaw_books)
 
 
 async def gather_data():

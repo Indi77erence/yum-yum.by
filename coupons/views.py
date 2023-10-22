@@ -34,7 +34,16 @@ def get_data_title_db():
 def add_coupons(data_for_add):
     for market in parser():
         for market_coupons in market:
-            if market_coupons[0] in data_for_add:
+            if market_coupons[0] in data_for_add and len(market_coupons) == 5:
+                Coupons.objects.create(
+                    title=market_coupons[0],
+                    content=market_coupons[1],
+                    price=market_coupons[2],
+                    photo=market_coupons[3],
+                    market_name=market_coupons[4],
+
+                )
+            elif market_coupons[0] in data_for_add and len(market_coupons) == 4:
                 Coupons.objects.create(
                     title=market_coupons[0],
                     content=market_coupons[1],
