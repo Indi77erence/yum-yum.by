@@ -5,13 +5,15 @@ import aiohttp
 from bs4 import BeautifulSoup
 from urlextract import URLExtract
 import lxml
+import re
 
 data_market = set()
 urls_market_dict = {
-    'BK': 'https://burger-king.by/coupons/',
+    # 'BK': 'https://burger-king.by/coupons/',
     'woksushi': 'https://woksushi.by/',
     'pizzahome': 'https://pizzahome.by/menu/akczii/',
     'dominos': 'https://dominos.by/discount_campaign/',
+    'hot-dog-family': 'https://carte.by/grodno/hot-dog/',
     # 'parkking': 'https://parkking.by/product-category/akcii/',
 }
 
@@ -20,27 +22,26 @@ async def get_page_data(session, market):
     async with session.get(url=market) as response:
         response_text = await response.text()
         soup = BeautifulSoup(response_text, 'lxml')
-        if market == 'https://burger-king.by/coupons/':
-            market_name = ('BK',)
+        # if market == 'https://burger-king.by/coupons/':
+        #     market_name = ('BK',)
+        #
+        #     name_coupons = soup.find_all('a', class_="sc-1cnk4by-10 dgqUFe")
+        #     name_coupons_list = [i.text.strip() for i in name_coupons]
+        #     desc_product = soup.find_all('p', class_='sc-1cnk4by-5 cUufIW')
+        #     desc_coupons_gen = (i.text.strip() for i in desc_product)
+        #
+        #     price_product = soup.find_all('p', class_='sc-1cnk4by-4 konLbd')
+        #     price_coupons_gen = (i.text.strip() for i in price_product)
+        #
+        #     image_product = soup.find_all('img', class_='sc-1cnk4by-2 dorgbF')
+        #     image_src_coupons_gen = (el.attrs["src"] for el in image_product)
+        #
+        #     burger_king_data = zip(name_coupons_list, desc_coupons_gen, price_coupons_gen,
+        #                            image_src_coupons_gen, market_name * len(name_coupons_list))
+        #
+        #     data_market.add(burger_king_data)
 
-            name_coupons = soup.find_all('a', class_="sc-1cnk4by-10 dgqUFe")
-            name_coupons_list = [i.text.strip() for i in name_coupons]
-
-            desc_product = soup.find_all('p', class_='sc-1cnk4by-5 cUufIW')
-            desc_coupons_gen = (i.text.strip() for i in desc_product)
-
-            price_product = soup.find_all('p', class_='sc-1cnk4by-4 konLbd')
-            price_coupons_gen = (i.text.strip() for i in price_product)
-
-            image_product = soup.find_all('img', class_='sc-1cnk4by-2 dorgbF')
-            image_src_coupons_gen = (el.attrs["src"] for el in image_product)
-
-            burger_king_data = zip(name_coupons_list, desc_coupons_gen, price_coupons_gen,
-                                   image_src_coupons_gen, market_name * len(name_coupons_list))
-
-            data_market.add(burger_king_data)
-
-        elif market == 'https://woksushi.by/':
+        if market == 'https://woksushi.by/':
             market_name = ('woksushi',)
             name_combo = soup.find(attrs={"data-id": "30"}).find_all('a', class_='ddish__name')
             name_combo_list = [name.text for name in name_combo]
@@ -116,6 +117,27 @@ async def get_page_data(session, market):
                                 image_gen, market_name * len(name_action_list))
             data_market.add(data_parkking)
 
+        elif market == 'https://carte.by/grodno/hot-dog/':
+            market_name = ('hot-dog-family',)
+
+            name_action_zapek = soup.find_all('div', class_='cmdish__name')
+            name_action_list = [name.text.strip() for name in name_action_zapek[:4]]
+
+            content = soup.find_all('div', class_='cmdish__ingredients')
+
+            name_content_list = [cont.text.strip() for cont in content[:4]]
+
+            prices = soup.find_all('div', class_='cmdish__price')
+
+            price_action_list = [price.text.strip() for price in prices[:4]]
+
+            images = soup.find_all(href=re.compile("assets"))
+
+            images_action_list = [image['href'] for image in images[:4]]
+            data_family = zip(name_action_list, name_content_list, price_action_list,
+                              images_action_list, market_name * len(name_action_list))
+            data_market.add(data_family)
+
 
 async def gather_data():
     async with aiohttp.ClientSession() as session:
@@ -139,5 +161,4 @@ def parser():
 if __name__ == '__main__':
     parser()
     for i in data_market:
-        for z in i:
-            print(z)
+        print(i)
