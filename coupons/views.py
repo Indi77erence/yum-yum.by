@@ -52,10 +52,10 @@ def add_coupons(data_for_add):
                 )
 
 
-def del_coupons(list_data_for_del):
+def del_coupons(data_for_del):
     sqlite_connection = sqlite3.connect('db.sqlite3')
     cursor = sqlite_connection.cursor()
-    for data in list_data_for_del:
+    for data in data_for_del:
         sql_del = "DELETE FROM coupons_coupons WHERE title = '%s'" % data
         cursor.execute(sql_del)
         sqlite_connection.commit()
