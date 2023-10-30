@@ -3,13 +3,30 @@ import logging
 import django.db.utils
 from django.shortcuts import render
 from main import parser, urls_market_dict
-from coupons.models import Coupons
+from coupons.models import Coupons, Category
 
 menu = ['Главная', 'Yum-yum']
+CATEGORY = {1: 'пиццы',
+            2: 'суши',
+            3: 'роллы',
+            4: 'шаурма',
+            5: 'бургеры',
+            }
 
 
 def start_cite():
     get_data_title_db()
+
+
+def add_category(CATEGORY):
+    try:
+        for i in CATEGORY.values():
+            Category.objects.create(
+                name=i
+            )
+    except django.db.utils.IntegrityError:
+        logging.basicConfig(level=logging.ERROR, filename="erors_log.log", filemode="a",
+                            format="%(asctime)s %(levelname)s %(message)s")
 
 
 def get_data_title_db():
@@ -34,8 +51,10 @@ def get_data_title_db():
 def add_coupons(data_for_add):
     for market in parser():
         for market_coupons in market:
-            if market_coupons[0] in data_for_add and len(market_coupons) == 5:
+            if market_coupons[0] in data_for_add and len(market_coupons) == 6:
+                category = Category.objects.get(pk=market_coupons[5])
                 Coupons.objects.create(
+                    category=category,
                     title=market_coupons[0],
                     content=market_coupons[1],
                     price=market_coupons[2],
@@ -43,8 +62,10 @@ def add_coupons(data_for_add):
                     market_name=market_coupons[4],
 
                 )
-            elif market_coupons[0] in data_for_add and len(market_coupons) == 4:
+            elif market_coupons[0] in data_for_add and len(market_coupons) == 5:
+                category = Category.objects.get(pk=market_coupons[4])
                 Coupons.objects.create(
+                    category=category,
                     title=market_coupons[0],
                     content=market_coupons[1],
                     photo=market_coupons[2],
@@ -83,4 +104,5 @@ def coupons_filter_market(request, market_name):
                    'title': menu[1]})
 
 
+add_category(CATEGORY)
 start_cite()

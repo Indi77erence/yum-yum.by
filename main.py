@@ -17,6 +17,7 @@ urls_market_dict = {
     'faradey': 'https://carte.by/grodno/faraday-delivery/',
     'shaw-books': 'https://carte.by/grodno/shawbooks-sov-delivery/',
 }
+CATEGORY = ['пиццы', 'суши', 'бургеры', 'роллы', 'шаурма']
 
 
 async def get_page_data(session, market):
@@ -25,36 +26,48 @@ async def get_page_data(session, market):
         soup = BeautifulSoup(response_text, 'lxml')
         if market == 'https://carte.by/grodno/burger-king-delivery/':
             market_name = ('BK',)
-
             name_coupons = soup.find_all('a', class_="ddish__url")
-            name_coupons_list = [i.text.strip() for i in name_coupons[1:-7]]
-
+            name_coupons_list = [i.text.strip() for i in name_coupons[1:20]]
+            content_combo_list = ['' for i in range(len(name_coupons_list))]
+            category_list = ['бургеры'] * len(name_coupons_list)
             price_product = soup.find_all('div', class_='ddish__sum')
-            price_coupons_gen = (i.text.strip() for i in price_product[1:-7])
+            price_coupons_gen = (i.text.strip() for i in price_product[1:20])
 
             images = soup.find_all(src=re.compile("assets"))
-            images_action_list = [image['src'] for image in images[1:-7]]
+            images_action_list = [image['src'] for image in images[1:20]]
 
-            content_combo_list = ['' for i in range(len(name_coupons_list))]
             burger_king_data = zip(name_coupons_list, content_combo_list, price_coupons_gen,
-                                   images_action_list, market_name * len(name_coupons_list))
+                                   images_action_list, market_name * len(name_coupons_list), category_list)
 
             data_market.add(burger_king_data)
 
         elif market == 'https://woksushi.by/':
             market_name = ('woksushi',)
+
             name_combo = soup.find(attrs={"data-id": "30"}).find_all('a', class_='ddish__name')
             name_combo_list = [name.text for name in name_combo]
+
             image_combo_gen = (image.get('data-full') for image in soup.find(attrs={"data-id": "30"}).select('img'))
 
             content_combo = soup.find(attrs={"data-id": "30"}).find_all('div', class_='ddish__ingredients')
+
+            category_list = []
+            for i in content_combo:
+                for z in CATEGORY:
+                    if z[:-1] in i.text.lower():
+                        category_list.append(z)
+                        break
+                else:
+                    category_list.append('бургеры')
+
             content_combo_gen = (content.text.replace('\n', '') for content in content_combo)
 
             price_combo = soup.find(attrs={"data-id": "30"}).find_all('div', class_='ddish__sum')
             price_combo_gen = (price.text.strip() for price in price_combo)
 
             data_woksushi = zip(name_combo_list, content_combo_gen, price_combo_gen, image_combo_gen,
-                                market_name * len(name_combo_list))
+                                market_name * len(name_combo_list), category_list)
+
             data_market.add(data_woksushi)
 
         elif market == 'https://pizzahome.by/menu/akczii/':
@@ -62,6 +75,15 @@ async def get_page_data(session, market):
             name_action = soup.find('ul', class_="products columns-4").find_all('h2', class_='woocommerce-loop'
                                                                                              '-product__title')
             name_action_list = [name.text.strip() for name in name_action]
+            name_action_list.append('бургер')
+            category_list = []
+            for i in name_action_list:
+                for z in CATEGORY:
+                    if z[:-1] in i.lower():
+                        category_list.append(z)
+                        break
+                else:
+                    category_list.append('бургеры')
 
             content_action = soup.find_all('div', class_="product-description")
             content_action_gen = (content.text.replace('\n', '') for content in content_action)
@@ -76,13 +98,15 @@ async def get_page_data(session, market):
                                 price % 2 != 0)
 
             data_pizzahome = zip(name_action_list, content_action_gen, price_action_gen,
-                                 image_action_gen, market_name * len(name_action_list))
+                                 image_action_gen, market_name * len(name_action_list), category_list)
             data_market.add(data_pizzahome)
 
         elif market == 'https://dominos.by/discount_campaign/':
             market_name = ('dominos',)
             name_price_action = soup.find_all('div', class_='info-card__content-title')
             name_price_action_list = [price.text for price in name_price_action]
+
+            category_list = ['пиццы'] * len(name_price_action_list)
 
             extractor = URLExtract()
             image_action = soup.find_all('div', class_='info-card__media-wrapper')
@@ -93,7 +117,7 @@ async def get_page_data(session, market):
             content_action_gen = (content.text for content in content_action)
 
             data_dominos = zip(name_price_action_list, content_action_gen, image_action_gen_rez,
-                               market_name * len(name_price_action))
+                               market_name * len(name_price_action), category_list)
             data_market.add(data_dominos)
 
         elif market == 'https://carte.by/grodno/hot-dog/':
@@ -103,8 +127,16 @@ async def get_page_data(session, market):
             name_action_list = [name.text.strip() for name in name_action_zapek[:4]]
 
             content = soup.find_all('div', class_='cmdish__ingredients')
+            category_list = []
 
             name_content_list = [cont.text.strip() for cont in content[:4]]
+            for i in name_content_list:
+                for z in CATEGORY:
+                    if z[:-1] in i.lower():
+                        category_list.append(z)
+                        break
+                else:
+                    category_list.append('бургеры')
 
             prices = soup.find_all('div', class_='cmdish__price')
 
@@ -114,7 +146,7 @@ async def get_page_data(session, market):
 
             images_action_list = [image['href'] for image in images[:4]]
             data_family = zip(name_action_list, name_content_list, price_action_list,
-                              images_action_list, market_name * len(name_action_list))
+                              images_action_list, market_name * len(name_action_list), category_list)
             data_market.add(data_family)
 
         elif market == 'https://carte.by/grodno/faraday-delivery/':
@@ -124,6 +156,14 @@ async def get_page_data(session, market):
 
             content_products = soup.find_all('div', class_='ddish__ingredients')
             content_product_list = [content.text.strip() for content in content_products[:8]]
+            category_list = []
+            for i in content_product_list:
+                for z in CATEGORY:
+                    if z[:-1] in i.lower():
+                        category_list.append(z)
+                        break
+                else:
+                    category_list.append('бургеры')
 
             price_products = soup.find_all('div', class_='ddish__sum')
             price_product_list = [price.text.strip() for price in price_products[:8]]
@@ -131,7 +171,7 @@ async def get_page_data(session, market):
             images = soup.find_all(src=re.compile("assets"))
             images_action_list = [image['src'] for image in images[1:9]]
             faradey = zip(name_product_list, content_product_list, price_product_list,
-                          images_action_list, market_name * len(name_product_list))
+                          images_action_list, market_name * len(name_product_list), category_list)
             data_market.add(faradey)
 
         elif market == 'https://carte.by/grodno/shawbooks-sov-delivery/':
@@ -141,6 +181,16 @@ async def get_page_data(session, market):
 
             content_products = soup.find_all('div', class_='ddish__ingredients')
             content_product_list = [content.text.strip() for content in content_products[1:13]]
+            category_list = []
+            for i in content_product_list:
+                for z in CATEGORY:
+                    if z[:-1] in i.lower():
+                        category_list.append(z)
+                        break
+                    elif 'лаваш' in i:
+                        category_list.append('шаурма')
+                else:
+                    category_list.append('бургеры')
 
             price_products = soup.find_all('div', class_='ddish__sum')
             price_product_list = [price.text.strip() for price in price_products[1:13]]
@@ -148,7 +198,7 @@ async def get_page_data(session, market):
             images = soup.find_all(src=re.compile("assets"))
             images_action_list = [image['src'] for image in images[2:13]]
             shaw_books = zip(name_product_list, content_product_list, price_product_list,
-                             images_action_list, market_name * len(name_product_list))
+                             images_action_list, market_name * len(name_product_list), category_list)
             data_market.add(shaw_books)
 
 
@@ -173,3 +223,4 @@ def parser():
 
 if __name__ == '__main__':
     parser()
+

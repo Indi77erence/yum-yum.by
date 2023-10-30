@@ -67,9 +67,9 @@ img{
 
 .coupons-items {
     font-family: 'Anton', sans-serif;
-    padding-left: 50px;
+    padding-left: 300px;
     padding-top: 0px;
-    padding-right: 50px;
+    padding-right: 300px;
     display: inline-grid;
     gap: 27px;
     grid-template-columns: repeat(3, 1fr);
@@ -111,8 +111,8 @@ img{
 }
 
 img {
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 210px;
 }
 
 nav {
@@ -214,9 +214,9 @@ nav a {
 @media screen and (max-width: 980px) {
     .coupons-items {
     font-family: 'Anton', sans-serif;
-    padding-left: 50px;
+    padding-left: 300px;
     padding-top: 0px;
-    padding-right: 50px;
+    padding-right: 300px;
     display: inline-grid;
     gap: 27px;
     grid-template-columns: repeat(2, 1fr);
@@ -228,9 +228,9 @@ nav a {
 @media screen and (max-width: 650px) {
     .coupons-items {
     font-family: 'Anton', sans-serif;
-    padding-left: 50px;
+    padding-left: 300pxpx;
     padding-top: 0px;
-    padding-right: 50px;
+    padding-right: 300px;
     display: inline-grid;
     gap: 27px;
     grid-template-columns: repeat(1, 1fr);
@@ -249,4 +249,43 @@ nav a {
     line-height: 1;
     letter-spacing: 3px;
     }
+}
+
+
+.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 160px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 100px; /* Stay at the top */
+    left: 100;
+    background-color: #111; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+/* Style page content */
+.main {
+    margin-left: 160px; /* Same as the width of the sidebar */
+    padding: 0px 10px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
 }
