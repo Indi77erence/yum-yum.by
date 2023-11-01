@@ -1,0 +1,225 @@
+2023-10-24 20:49:38,389 ERROR django.db.utils.IntegrityError
+2023-10-24 20:50:10,797 ERROR django.db.utils.IntegrityError
+2023-10-24 20:50:37,454 ERROR django.db.utils.IntegrityError
+2023-10-24 20:50:40,731 WARNING Not Found: /favicon.ico
+2023-10-24 20:52:45,303 ERROR django.db.utils.IntegrityError
+2023-10-24 20:54:33,747 ERROR django.db.utils.IntegrityError
+2023-10-24 20:54:35,442 WARNING Not Found: /favicon.ico
+2023-10-24 20:59:10,208 ERROR django.db.utils.IntegrityError
+2023-10-24 21:00:04,896 ERROR django.db.utils.IntegrityError
+2023-10-24 21:00:34,975 ERROR django.db.utils.IntegrityError
+2023-10-24 21:01:20,339 INFO D:\Python\yum-yum.by\yum-yum.by\coupons\admin.py changed, reloading.
+2023-10-24 21:01:27,371 ERROR django.db.utils.IntegrityError
+2023-10-24 21:01:37,793 ERROR Internal Server Error: /admin/coupons/category/add/
+Traceback (most recent call last):
+  File "D:\Python\yum-yum.by\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\yum-yum.by\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: NOT NULL constraint failed: coupons_category.url
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Python\yum-yum.by\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\yum-yum.by\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\yum-yum.by\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\yum-yum.by\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\yum-yum.by\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\yum-yum.by\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\yum-yum.by\venv\Lib\site-packages\django\contrib\admin\options.py", line 1886, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\yum-yum.by\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\yum-yum.by\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\yum-yum.by\venv\Lib\site-packages\django\contrib\admin\options.py", line 1747, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\yum-yum.by\venv\Lib\site-packages\django\contrib\admin\options.py", line 1798, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "D:\Python\yum-yum.by\venv\Lib\site-packages\django\contrib\admin\options.py", line 1227, in save_model
+    obj.save()
+  File "D:\Python\yum-yum.by\venv\Lib\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "D:\Python\yum-yum.by\venv\Lib\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "D:\Python\yum-yum.by\venv\Lib\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "D:\Python\yum-yum.by\venv\Lib\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "D:\Python\yum-yum.by\venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\yum-yum.by\venv\Lib\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\yum-yum.by\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\Python\yum-yum.by\venv\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\yum-yum.by\venv\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\yum-yum.by\venv\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\yum-yum.by\venv\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\Python\yum-yum.by\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\Python\yum-yum.by\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\yum-yum.by\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: NOT NULL constraint failed: coupons_category.url
+2023-10-24 21:02:45,212 ERROR Internal Server Error: /admin/coupons/category/add/
+Traceback (most recent call last):
+  File "D:\Python\yum-yum.by\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\yum-yum.by\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: NOT NULL constraint failed: coupons_category.url
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Python\yum-yum.by\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\yum-yum.by\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\yum-yum.by\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\yum-yum.by\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\yum-yum.by\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\yum-yum.by\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\yum-yum.by\venv\Lib\site-packages\django\contrib\admin\options.py", line 1886, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\yum-yum.by\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\yum-yum.by\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\yum-yum.by\venv\Lib\site-packages\django\contrib\admin\options.py", line 1747, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\yum-yum.by\venv\Lib\site-packages\django\contrib\admin\options.py", line 1798, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "D:\Python\yum-yum.by\venv\Lib\site-packages\django\contrib\admin\options.py", line 1227, in save_model
+    obj.save()
+  File "D:\Python\yum-yum.by\venv\Lib\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "D:\Python\yum-yum.by\venv\Lib\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "D:\Python\yum-yum.by\venv\Lib\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "D:\Python\yum-yum.by\venv\Lib\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "D:\Python\yum-yum.by\venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\yum-yum.by\venv\Lib\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\yum-yum.by\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\Python\yum-yum.by\venv\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\yum-yum.by\venv\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\yum-yum.by\venv\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\yum-yum.by\venv\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\Python\yum-yum.by\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\Python\yum-yum.by\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\yum-yum.by\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: NOT NULL constraint failed: coupons_category.url
+2023-10-24 21:04:33,519 INFO D:\Python\yum-yum.by\yum-yum.by\coupons\models.py changed, reloading.
+2023-10-24 21:04:44,455 ERROR django.db.utils.IntegrityError
+2023-10-24 21:04:57,080 ERROR django.db.utils.IntegrityError
+2023-10-25 00:11:15,109 ERROR aiohttp.ClientConnectorError
+2023-10-25 00:11:15,109 ERROR TypeError
+2023-10-25 00:12:30,362 INFO D:\Python\yum-yum.by\yum-yum.by\coupons\views.py changed, reloading.
+2023-10-25 06:56:03,624 ERROR TypeError
+2023-10-25 06:56:34,851 INFO D:\Python\yum-yum.by\yum-yum.by\coupons\views.py changed, reloading.
+2023-10-25 06:56:46,413 ERROR TypeError
+2023-10-25 06:57:14,247 INFO D:\Python\yum-yum.by\yum-yum.by\coupons\views.py changed, reloading.
+2023-10-25 06:57:19,529 ERROR TypeError
+2023-10-25 06:57:41,776 ERROR TypeError
+2023-10-25 06:58:01,622 ERROR TypeError
+2023-10-25 06:58:43,810 ERROR TypeError
+2023-10-25 06:59:11,056 INFO D:\Python\yum-yum.by\yum-yum.by\coupons\migrations\0006_alter_coupons_category.py changed, reloading.
+2023-10-25 06:59:16,652 ERROR TypeError
+2023-10-25 07:00:31,561 ERROR TypeError
+2023-10-25 21:12:04,415 INFO D:\Python\yum-yum.by\yum-yum.by\coupons\views.py changed, reloading.
+2023-10-25 21:15:49,510 INFO D:\Python\yum-yum.by\yum-yum.by\coupons\views.py changed, reloading.
+2023-10-25 21:21:00,154 INFO D:\Python\yum-yum.by\yum-yum.by\coupons\views.py changed, reloading.
+2023-10-25 21:22:00,474 INFO D:\Python\yum-yum.by\yum-yum.by\coupons\views.py changed, reloading.
+2023-10-25 21:42:06,319 ERROR django.db.utils.IntegrityError
+2023-10-25 22:02:51,518 ERROR django.db.utils.IntegrityError
+2023-10-25 22:03:22,702 WARNING Not Found: /favicon.ico
+2023-10-25 22:05:08,164 ERROR django.db.utils.IntegrityError
+2023-10-25 22:06:01,645 ERROR django.db.utils.IntegrityError
+2023-10-25 22:07:30,932 INFO D:\Python\yum-yum.by\yum-yum.by\coupons\views.py changed, reloading.
+2023-10-26 21:32:25,608 INFO D:\Python\yum-yum.by\yum-yum.by\main.py changed, reloading.
+2023-10-26 23:43:26,786 WARNING Not Found: /favicon.ico
+2023-10-26 23:43:57,776 WARNING Not Found: /favicon.ico
+2023-10-26 23:44:10,914 WARNING Not Found: /favicon.ico
+2023-10-26 23:44:45,183 WARNING Not Found: /favicon.ico
+2023-10-26 23:45:31,895 WARNING Not Found: /favicon.ico
+2023-10-26 23:46:15,366 WARNING Not Found: /favicon.ico
+2023-10-26 23:46:52,468 WARNING Not Found: /favicon.ico
+2023-10-26 23:47:31,487 WARNING Not Found: /favicon.ico
+2023-10-26 23:50:26,623 WARNING Not Found: /favicon.ico
+2023-10-26 23:51:31,626 WARNING Not Found: /favicon.ico
+2023-10-26 23:51:53,614 WARNING Not Found: /favicon.ico
+2023-11-01 21:03:37,859 INFO D:\Python\yum-yum.by\yum-yum.by\coupons\views.py changed, reloading.
+2023-11-01 21:05:53,763 WARNING Not Found: /favicon.ico

@@ -2,7 +2,7 @@ import sqlite3
 import logging
 import django.db.utils
 from django.shortcuts import render
-from main import parser, urls_market_dict
+from parser.main import parser, urls_market_dict
 from coupons.models import Coupons, Category
 
 menu = ['Главная', 'Yum-yum']

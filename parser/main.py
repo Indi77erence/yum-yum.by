@@ -216,7 +216,7 @@ def parser():
         asyncio.run(gather_data())
         return data_market
     except aiohttp.ClientConnectorError as ClientConnectorError:
-        logging.basicConfig(level=logging.ERROR, filename="erors_log.log", filemode="a",
+        logging.basicConfig(level=logging.ERROR, filename="../erors_log.log", filemode="a",
                             format="%(asctime)s %(levelname)s %(message)s")
         logging.error('aiohttp.ClientConnectorError', exc_info=False)
 
